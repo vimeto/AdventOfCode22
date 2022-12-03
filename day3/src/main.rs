@@ -11,37 +11,27 @@ fn main() {
     let reader = BufReader::new(f);
     let mut lone_characters: Vec<char> = Vec::new();
     let mut score = 0;
+    let mut ls: Vec<String> = Vec::new();
 
     for line in reader.lines() {
-        let l = line.unwrap();
-        let length = l.len();
+        ls.push(line.unwrap());
+    }
 
-        if length % 2 != 0 {
-            println!("line is not even length");
-            continue;
-        }
+    let offset = 3;
 
-        let a = &l[0..length/2];
-        let b = &l[length/2..length];
+    for (index, first_line) in ls.iter().enumerate().step_by(offset) {
+        let second_line = &ls[index + 1];
+        let third_line = &ls[index + 2];
 
-        // println!("a: {}", a);
-        // println!("b: {}", b);
-
-        let a_chars = a.chars();
-
-        for a_char in a_chars {
-            if b.contains(a_char) {
-                // println!("found a match: {}", a_char);
-                lone_characters.push(a_char);
+        for a in first_line.chars() {
+            if second_line.contains(a) && third_line.contains(a) {
+                lone_characters.push(a);
                 break;
             }
         }
     }
 
-    // const RADIX: u32 = 10;
-
     for char in lone_characters {
-        // let digit = char.to_digit(RADIX).unwrap_or(1500);
         let mut digit = char as u32;
 
         if digit >= 97 && digit <= 122 {
@@ -52,10 +42,5 @@ fn main() {
 
         score += digit;
     }
-
-    // println!("lone characters: {:?}", lone_characters);
-
-
-    // println!("{}", d.display());
     println!("score: {}", score);
 }

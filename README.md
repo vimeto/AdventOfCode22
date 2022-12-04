@@ -1,1 +1,52 @@
-# Advent of code 2022
+# Advent of code 2022 (every day new programming language)
+
+1. Typescript
+2. C++
+3. Rust
+4. Scala
+
+    *ToDo (may change):*
+
+1. Julia
+1. Elixir
+1. Visual Basic
+1. Perl
+1. Lua
+1. Dlang
+1. Maple
+
+1. C
+1. C#
+1. Objective-C
+
+1. PHP
+1. Swift
+1. Java
+1. Kotlin
+
+1. Go
+1. Dart
+
+1. R
+1. MatLab
+
+1. Ruby
+1. Python
+1. Javascript
+
+*...*
+
+1. Haskell
+1. Pascal
+1. Prolog
+1. COBOL
+1. Erlang
+1. Ada
+1. Clojure
+1. F
+1. Basic
+1. Lisp
+
+1. Algol
+1. APL
+

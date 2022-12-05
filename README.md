@@ -1,13 +1,13 @@
 # Advent of code 2022 (every day new programming language)
 
 1. Typescript
-2. C++
-3. Rust
-4. Scala
+1. C++
+1. Rust
+1. Scala
+1. Julia
 
     *ToDo (may change):*
 
-1. Julia
 1. Elixir
 1. Visual Basic
 1. Perl

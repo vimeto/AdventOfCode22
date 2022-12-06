@@ -5,10 +5,10 @@
 1. Rust
 1. Scala
 1. Julia
+1. Elixir
 
     *ToDo (may change):*
 
-1. Elixir
 1. Visual Basic
 1. Perl
 1. Lua

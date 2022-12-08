@@ -6,14 +6,14 @@
 1. Scala
 1. Julia
 1. Elixir
+1. Perl
+1. Lua
 
     *ToDo (may change):*
 
-1. Visual Basic
-1. Perl
-1. Lua
 1. Dlang
 1. Maple
+1. JS++
 
 1. C
 1. C#

@@ -11,11 +11,11 @@
 1. Dlang
 1. JS++
 1. Nim
+1. C#
 
     *ToDo (may change):*
 
 1. C
-1. C#
 1. Objective-C
 
 1. PHP

@@ -1,0 +1,69 @@
+import System;
+
+external require;
+external parseInt;
+external console;
+external Math;
+external fs = require("fs");
+
+int[] nums = [1];
+
+try {
+  var data = fs.readFileSync("inputs/input.txt", "utf8");
+
+  var lines = data.split("\n");
+  for (var i = 0; i < lines.length; i++) {
+    var line = lines[i];
+    if (line.length > 0) {
+      var commands = line.split(" ");
+      var command = commands[0];
+      int last_num = nums.last() ?? 1;
+      if (command == "addx" && commands.length == 2) {
+        int num = parseInt(commands[1]);
+        nums.push(last_num);
+        nums.push(last_num + num);
+      } else if (command == "noop") {
+        nums.push(last_num);
+      }
+    }
+  }
+
+  int[] aaa = [20, 60, 100, 140, 180, 220];
+  int sum = 0;
+
+  // for (var i = 0; i < aaa.length; i++) {
+  //   int index = (aaa[i] ?? 1) - 1;
+  //   int addition = (nums[index] ?? 0) * (index + 1);
+  //   console.log(index, addition, nums[index] ?? 0);
+
+  //   sum += addition;
+  // }
+
+  // console.log(sum); // first answer
+
+  bool[][] screen = [[], [], [], [], [], []];
+  string str = "";
+
+  for (var i = 0; i < nums.length; i++) {
+    int index = Math.floor(i / 40);
+    int remainder = i % 40;
+    if (remainder === 0) {
+      console.log(str);
+      str = "";
+    }
+    int num = nums[i] ?? 0;
+
+    int diff = num - remainder;
+    if (diff <= 1 && diff >= -1) {
+      screen[index][remainder] = true;
+      str += "#";
+    } else {
+      str += ".";
+    }
+  }
+
+  console.log(str);
+
+} catch (e) {
+  console.log("Error:", e.stack);
+}

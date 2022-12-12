@@ -8,12 +8,11 @@
 1. Elixir
 1. Perl
 1. Lua
+1. Dlang
+1. JS++
+1. Nim
 
     *ToDo (may change):*
-
-1. Dlang
-1. Maple
-1. JS++
 
 1. C
 1. C#
